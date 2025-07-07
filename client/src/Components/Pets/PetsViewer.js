@@ -19,7 +19,7 @@ const PetsViewer = (props) => {
     <>
   <div className='pet-view-card'>
     <div className='pet-card-pic'>
-      <img src={`${baseUrl}/images/${props.pet.filename}`} alt={props.pet.name} />
+      <img src={`https://pet-s-paradise.onrender.com/images/${props.pet.filename}`} alt={props.pet.name} />
     </div>
     <div className='pet-card-details'>
       <h2>{props.pet.name}</h2>

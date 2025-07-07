@@ -42,7 +42,7 @@ function AdoptForm(props) {
 
       setIsSubmitting(true)
 
-      const response = await fetch(`${baseUrl}/form/save`, {
+      const response = await fetch(`https://pet-s-paradise.onrender.com/form/save`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -88,7 +88,7 @@ function AdoptForm(props) {
       <div className="form-pet-container">
         <div className="pet-details">
           <div className="pet-pic">
-            <img src={`${baseUrl}/images/${props.pet.filename}`} alt={props.pet.name} />
+            <img src={`https://pet-s-paradise.onrender.com/images/${props.pet.filename}`} alt={props.pet.name} />
           </div>
           <div className="pet-info">
             <h2>{props.pet.name}</h2>

@@ -13,7 +13,7 @@ const AdminLogin = () => {
   useEffect(() => {
     const fetchUsersData = async () => {
       try {
-        const response = await fetch(`${baseUrl}/admin/credentials`);
+        const response = await fetch(`https://pet-s-paradise.onrender.com/admin/credentials`);
         if (!response.ok) {
           throw new Error('Failed to fetch');
         }

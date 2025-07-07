@@ -8,7 +8,7 @@ const ApprovedRequests = () => {
 
   const fetchRequests = async () => {
     try {
-      const response = await fetch(`${baseUrl}/approvedPets`)
+      const response = await fetch(`https://pet-s-paradise.onrender.com/approvedPets`)
       if (!response.ok) {
         throw new Error('An error occurred')
       }

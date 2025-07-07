@@ -27,7 +27,7 @@ const PetCards = (props) => {
   const handleApprove = async () => {
     setIsApproving(true);
     try {
-      const response = await fetch(`${baseUrl}/approving/${props.pet._id}`, {
+      const response = await fetch(`https://pet-s-paradise.onrender.com/approving/${props.pet._id}`, {
         method: 'PUT',
         body: JSON.stringify({
           status: "Approved"
@@ -52,7 +52,7 @@ const PetCards = (props) => {
   const deleteFormsAdoptedPet = async () => {
     setIsDeleting(true)
     try {
-      const deleteResponses = await fetch(`${baseUrl}/form/delete/many/${props.pet._id}`, {
+      const deleteResponses = await fetch(`https://pet-s-paradise.onrender.com/form/delete/many/${props.pet._id}`, {
         method: 'DELETE'
       });
       if (!deleteResponses.ok) {
@@ -66,7 +66,7 @@ const PetCards = (props) => {
 
   const handleReject = async () => {
     try {
-      const response = await fetch(`${baseUrl}/delete/${props.pet._id}`, {
+      const response = await fetch(`https://pet-s-paradise.onrender.com/delete/${props.pet._id}`, {
         method: 'DELETE'
       })
 
@@ -88,7 +88,7 @@ const PetCards = (props) => {
     <div className='req-containter'>
       <div className='pet-view-card'>
         <div className='pet-card-pic'>
-          <img src={`${baseUrl}/images/${props.pet.filename}`} alt={props.pet.name} />
+          <img src={`https://pet-s-paradise.onrender.com/images/${props.pet.filename}`} alt={props.pet.name} />
         </div>
         <div className='pet-card-details'>
           <h2>{props.pet.name}</h2>

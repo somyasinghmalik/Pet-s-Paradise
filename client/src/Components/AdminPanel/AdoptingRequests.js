@@ -12,7 +12,7 @@ const AdoptingRequests = () => {
 
   const fetchForms = async () => {
     try {
-      const response = await fetch(`${baseUrl}/form/getForms`);
+      const response = await fetch(`https://pet-s-paradise.onrender.com/form/getForms`);
       if (!response.ok) {
         throw new Error('An error occurred');
       }
@@ -27,7 +27,7 @@ const AdoptingRequests = () => {
 
   const fetchPets = async () => {
     try {
-      const response = await fetch(`${baseUrl}/approvedPets`);
+      const response = await fetch(`https://pet-s-paradise.onrender.com/approvedPets`);
       if (!response.ok) {
         throw new Error('An error occurred');
       }
@@ -113,7 +113,7 @@ const AdoptingRequests = () => {
           <div className='popup-content'>
             <div className='pet-view-card'>
               <div className='pet-card-pic'>
-                <img src={`${baseUrl}/images/${selectedPet.filename}`} alt={selectedPet.name} />
+                <img src={`https://pet-s-paradise.onrender.com/images/${selectedPet.filename}`} alt={selectedPet.name} />
               </div>
               <div className='pet-card-details'>
                 <h2>{selectedPet.name}</h2>

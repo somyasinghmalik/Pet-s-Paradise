@@ -8,7 +8,7 @@ const PostingPets = () => {
 
   const fetchRequests = async () => {
     try {
-      const response = await fetch(`${baseUrl}/requests`)
+      const response = await fetch(`https://pet-s-paradise.onrender.com/requests`)
       if (!response.ok) {
         throw new Error('An error occurred')
       }

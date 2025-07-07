@@ -18,7 +18,7 @@ const FormCard = (props) => {
   const handleApprove = async () => {
     setIsApproving(true);
     try {
-      const response = await fetch(`${baseUrl}/approving/${props.form.petId}`, {
+      const response = await fetch(`https://pet-s-paradise.onrender.com/approving/${props.form.petId}`, {
         method: 'PUT',
         body: JSON.stringify({
           email: props.form.email,
@@ -44,7 +44,7 @@ const FormCard = (props) => {
   
   const deleteFormAdoptedPet = async () => {
     try {
-      const deleteResponse = await fetch(`${baseUrl}/form/delete/many/${props.form.petId}`, {
+      const deleteResponse = await fetch(`https://pet-s-paradise.onrender.com/form/delete/many/${props.form.petId}`, {
         method: 'DELETE'
       });
       if (!deleteResponse.ok) {
@@ -60,7 +60,7 @@ const FormCard = (props) => {
   const handleReject = async () => {
     setIsDeleting(true)
     try {
-      const response = await fetch(`${baseUrl}/form/reject/${props.form._id}`, {
+      const response = await fetch(`https://pet-s-paradise.onrender.com/form/reject/${props.form._id}`, {
         method: 'DELETE'
       })
 

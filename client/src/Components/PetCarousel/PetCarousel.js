@@ -9,7 +9,7 @@ const PetCarousel = () => {
   useEffect(() => {
     const fetchPets = async () => {
       try {
-        const response = await fetch(`${baseUrl}/approvedPets`);
+        const response = await fetch(`https://pet-s-paradise.onrender.com/approvedPets`);
         const data = await response.json();
 
         if (Array.isArray(data)) {
@@ -41,7 +41,7 @@ const PetCarousel = () => {
         {pets.map((pet, index) => (
           <div key={index} className="carousel-card">
             <img
-              src={`${baseUrl}/images/${pet.filename}`}
+              src={`https://pet-s-paradise.onrender.com/images/${pet.filename}`}
               alt={pet.name}
               className="carousel-pet-img"
             />
