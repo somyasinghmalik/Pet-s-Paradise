@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import FormCard from './FormCard';
+import { baseUrl } from '../../db.js';
 
 const AdoptingRequests = () => {
   const [forms, setForms] = useState([]);
@@ -11,7 +12,7 @@ const AdoptingRequests = () => {
 
   const fetchForms = async () => {
     try {
-      const response = await fetch('http://localhost:4000/form/getForms');
+      const response = await fetch(`${baseUrl}/form/getForms`);
       if (!response.ok) {
         throw new Error('An error occurred');
       }
@@ -26,7 +27,7 @@ const AdoptingRequests = () => {
 
   const fetchPets = async () => {
     try {
-      const response = await fetch('http://localhost:4000/approvedPets');
+      const response = await fetch(`${baseUrl}/approvedPets`);
       if (!response.ok) {
         throw new Error('An error occurred');
       }
@@ -112,7 +113,7 @@ const AdoptingRequests = () => {
           <div className='popup-content'>
             <div className='pet-view-card'>
               <div className='pet-card-pic'>
-                <img src={`http://localhost:4000/images/${selectedPet.filename}`} alt={selectedPet.name} />
+                <img src={`${baseUrl}/images/${selectedPet.filename}`} alt={selectedPet.name} />
               </div>
               <div className='pet-card-details'>
                 <h2>{selectedPet.name}</h2>

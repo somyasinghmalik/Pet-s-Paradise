@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import postPet from "./images/post1.png";
+import { baseUrl } from '../../db.js';
 
 const PostPetSection = () => {
   const [name, setName] = useState("");
@@ -81,7 +82,7 @@ const PostPetSection = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:4000/services", {
+      const response = await fetch(`${baseUrl}/services`, {
         method: "POST",
         body: formData,
       });

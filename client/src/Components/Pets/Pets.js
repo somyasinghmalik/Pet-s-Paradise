@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PetsViewer from "./PetsViewer";
+import { baseUrl } from '../../db.js';
 
 const Pets = () => {
   const [filter, setFilter] = useState("all");
@@ -9,7 +10,7 @@ const Pets = () => {
   useEffect(() => {
     const fetchRequests = async () => {
       try {
-        const response = await fetch('http://localhost:4000/approvedPets')
+        const response = await fetch(`${baseUrl}/approvedPets`)
         if (!response.ok) {
           throw new Error('An error occurred')
         }

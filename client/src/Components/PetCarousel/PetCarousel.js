@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './PetCarousel.css';
+import { baseUrl } from '../../db.js';
 
 const PetCarousel = () => {
   const [pets, setPets] = useState([]);
@@ -8,7 +9,7 @@ const PetCarousel = () => {
   useEffect(() => {
     const fetchPets = async () => {
       try {
-        const response = await fetch('http://localhost:4000/approvedPets');
+        const response = await fetch(`${baseUrl}/approvedPets`);
         const data = await response.json();
 
         if (Array.isArray(data)) {
@@ -40,7 +41,7 @@ const PetCarousel = () => {
         {pets.map((pet, index) => (
           <div key={index} className="carousel-card">
             <img
-              src={`http://localhost:4000/images/${pet.filename}`}
+              src={`${baseUrl}/images/${pet.filename}`}
               alt={pet.name}
               className="carousel-pet-img"
             />

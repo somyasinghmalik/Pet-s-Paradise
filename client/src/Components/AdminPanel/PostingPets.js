@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PetCards from './PetCards'
+import { baseUrl } from '../../db.js';
 
 const PostingPets = () => {
   const [requests, setRequests] = useState([])
@@ -7,7 +8,7 @@ const PostingPets = () => {
 
   const fetchRequests = async () => {
     try {
-      const response = await fetch('http://localhost:4000/requests')
+      const response = await fetch(`${baseUrl}/requests`)
       if (!response.ok) {
         throw new Error('An error occurred')
       }
