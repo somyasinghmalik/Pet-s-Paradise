@@ -30,7 +30,7 @@ app.get("*", (req, res) => {
 });
 
 // Connect to MongoDB and start server
-mongoose.connect(process.env.mongooseURL)
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('Connected to DB');
     const PORT = process.env.PORT || 4000;
