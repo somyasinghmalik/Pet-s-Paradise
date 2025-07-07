@@ -8,7 +8,7 @@ const cors = require('cors');
 const path = require('path');
 
 // Serve React frontend in production
-const path = require("path");
+
 app.use(express.static(path.join(__dirname, "../client/build")));
 
 app.get("*", (req, res) => {
