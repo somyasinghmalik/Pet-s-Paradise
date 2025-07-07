@@ -1,5 +1,5 @@
 import React from "react";
-import developerPng from "./images/developer-png.png";
+import developerPng from "./images/Dog.png";
 
 const Contact = () => {
   return (
