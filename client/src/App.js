@@ -29,7 +29,7 @@ const App = () => {
           path="/" 
           element={
             <Layout>
-              <Home description="Ensure you are fully prepared to provide proper care and attention to your pet before welcoming them into your home." />
+              <Home description="Adopting a pet is more than just bringing home a furry companion — it’s a lifelong commitment to love, care, and protect. Before you make this meaningful decision, take the time to understand their needs, prepare your home, and ensure you’re ready to offer the time, attention, and compassion every animal deserves. A pet’s trust is a precious gift — make sure you’re ready to receive it." />
             </Layout>
           } 
         />

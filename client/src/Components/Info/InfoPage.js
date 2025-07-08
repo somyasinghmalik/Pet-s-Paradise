@@ -1,8 +1,8 @@
 import React from 'react';
-import dog from './images/Dog-care.png'
-import cat from './images/Cat-care.jpg'
-import rabbit from './images/Rabbit-care.jpg'
-import bird from './images/Bird-care.jpg'
+import dog from './images/Dog-care.png';
+import cat from './images/Cat-care.jpg';
+import rabbit from './images/Rabbit-care.jpg';
+import bird from './images/Bird-care.jpg';
 
 const careSections = [
   {
@@ -14,7 +14,7 @@ const careSections = [
       "🏥 Visit the vet for annual checkups and vaccinations.",
       "💓 Show love and attention to build a strong bond.",
     ],
-    image: dog, // replace with your own or local image
+    image: dog,
   },
   {
     title: "🐱 Cat Care",
@@ -83,8 +83,16 @@ function InfoPage() {
             />
           </div>
 
-          {/* Text */}
-          <div style={{ flex: '1 1 400px' }}>
+          {/* Text with colored box */}
+          <div
+            style={{
+              flex: '1 1 400px',
+              backgroundColor: '#fff9ec',
+              padding: '1.5rem',
+              borderRadius: '12px',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+            }}
+          >
             <h2>{section.title}</h2>
             <ul>
               {section.tips.map((tip, i) => (
@@ -99,4 +107,3 @@ function InfoPage() {
 }
 
 export default InfoPage;
-
